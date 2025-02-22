@@ -1,0 +1,58 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background: url(images/background.jpg) no-repeat;
+  background-size: cover;
+}
+
+/* start crcreen  */
+#start-screen{
+    display: none;
+}
+.gameBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title ,#lost-comment , #win-comment{
+  color: red;
+  text-align: center;
+  font-size: 100px;
+  border: 2px solid rgb(110, 110, 197);
+  background-color: rgb(50, 50, 75);
+  width: 800px;
+}
+#start-button, #restart-button ,
+.output {
+  color: red;
+  border: none;
+  background-color: rgb(50, 50, 75);
+  font-size: 50px;
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+}
+.output {
+  margin-top: 20px;
+}
+/* End screen */
+#end-screen{
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* #lost-comment , #win-comment{
+    font-size:100px;
+    color: red;
+    text-align: center;
+    font-size: 100px;
+    border: 2px solid rgb(110, 110, 197);
+    background-color: rgb(50, 50, 75);
+    width: 800px;
+} */

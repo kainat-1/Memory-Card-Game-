@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marvel Memory Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 1. start screen -->
+    <div id="start-screen">
+      <h1 class="title">Memory Cards</h1>
+      <div>
+        <div class="gameBody">
+            <button id="start-button">Start</button>
+            <div class="output">
+                <div id="score">score :</div>
+                <div id="moves">moves :</div>
+            </div>
+           
+        </div>
+       
+      </div>
+    </div>
+    <!-- 2. the main game -->
+    <div id="Memory-board"></div>
+   
+
+    <!-- 3. end screen -->
+    <div id="end-screen">
+      <h2 id="win-comment">You Win</h2>
+      <h2 id="lost-comment">You lost</h2>
+      <button id="restart-button">Restsrt</button>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
