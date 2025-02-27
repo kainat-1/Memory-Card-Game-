@@ -7,63 +7,70 @@ body {
   background: url(images/background.jpg) no-repeat;
   background-size: cover;
 }
-.active{
+.active {
   display: flex;
 }
 /* start crcreen  */
 #start-screen {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .gameBody {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+.flex-container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1em;
+  flex-wrap: wrap;
+  width: 100%;
+}
 #memory-board {
   display: none;
   flex-wrap: wrap;
+  grid-template-columns: repeat(4, 1fr);
   justify-content: center;
+  align-items: center;
   gap: 10px;
   margin-top: 20px;
 }
 
 .card {
-  width: 100px;
+  width: 20%;
   height: 150px;
   position: relative;
   border: 1px solid #ccc;
-  perspective: 1000px;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
 }
-
-.card-front {
-  width: 100%;
-  height: 100%;
-  background-color: lightgray;
-  display: block;
-  
-}
-
+.card-front,
 .card-back {
   width: 100%;
   height: 100%;
-  background-color: darkgray;
-  display: none;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.5s;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card-back {
+  transform: rotateY(180deg);
+}
+.card.flip .card-front {
+  transform: rotateY(180deg);
 }
 
 .card.flip .card-back {
-  display: block;
+  transform: rotateY(0deg);
 }
-
-.card.flip .card-front {
-  display: none;
-}
-
-
-.moveAndScore{
+.moveAndScore {
   color: red;
   font-size: 30px;
 }
@@ -106,11 +113,11 @@ body {
 }
 /* End screen */
 #end-screen {
- 
   display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: opacity 0.5s ease-in-out;
 }
 /* #lost-comment , #win-comment{
     font-size:100px;
@@ -121,4 +128,3 @@ body {
     background-color: rgb(50, 50, 75);
     width: 800px;
 } */
-
