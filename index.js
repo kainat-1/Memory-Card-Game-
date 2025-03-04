@@ -1,6 +1,8 @@
+let game;
 document.getElementById("start-button").addEventListener("click", function () {
   document.getElementById("memory-board").style.display = "flex";
   document.getElementById("start-screen").style.display = "none";
+  game = new MemoryGame();
 });
 
 const cardImages = [
@@ -33,5 +35,19 @@ const gameCards = [...cardImages, ...cardImages].map((card, index) => {
 const memoryBoard = document.getElementById("memory-board");
 gameCards.forEach((card) => memoryBoard.appendChild(card));
 
+// adding flip
+gameCards.forEach((card) =>
+  card.addEventListener("click", (event) => {
+    game.flipCard(card);
+  })
+);
 
+// EXAMPLE ADDING EVENT LISTENER FOR ALL CARDS
+// gameCards.forEach((card) =>
+//   card.addEventListener("click", (e) => {
+//     console.log(e.target);
+//   })
+// );
 
+// EXAMPLE CREATING AN INSTANCE OF MEMORY GAME CLASS
+// const memmoryGame = new MemoryGame()

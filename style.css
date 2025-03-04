@@ -59,26 +59,24 @@ body {
   width: 100%;
   height: 100%;
   position: absolute;
-  backface-visibility: hidden;
   transition: transform 0.5s;
   background-repeat: no-repeat;
   background-size: cover;
-  transition: transform 0.6s ease;
+  /* backface-visibility : hidden; */
 }
-/* .card-front{
-  display: none;
-} */
-.card-back {
+.card-front {
   transform: rotateY(180deg);
-  background-color: red;
- 
-}
-.card.flip .card-front {
-  transform: rotateY(180deg);
-}
+  backface-visibility: hidden;
 
-.card.flip .card-back {
-  transform: rotateY(0deg);
+  /* display: none; */
+}
+/* .card-back {
+  background-color: red;
+} */
+
+.flipped {
+  transform: rotateY(180deg);
+  background-color: blue;
 }
 .moveAndScore {
   color: red;
