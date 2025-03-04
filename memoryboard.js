@@ -4,7 +4,6 @@ class MemoryGame {
     this.moves = document.querySelector("#moves-count");
     this.score = document.querySelector("#score-count");
     this.maxMoves = 5;
-    
   }
 
   flipCard(card) {
@@ -45,6 +44,8 @@ class MemoryGame {
   endGame(isWon) {
     document.getElementById("memory-board").style.display = "none";
     document.getElementById("end-screen").style.display = "flex";
+    // document.getElementById("restart-button").style.display = "flex";
+
     if (isWon) {
       document.getElementById("win-comment").style.display = "block";
     } else {
@@ -55,6 +56,7 @@ class MemoryGame {
     const totalPairs = cardImages.length;
     const matchedPairs = document.querySelectorAll(".card.matched").length / 2;
     if (matchedPairs === totalPairs) {
+      isWon = true;
       this.endGame(true);
     }
   }

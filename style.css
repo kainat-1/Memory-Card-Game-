@@ -1,8 +1,6 @@
 body {
   display: flex;
   flex-direction: column;
-  /* justify-content: center;
-  align-items: center; */
   margin: 0;
   background: url(images/background.jpg) no-repeat;
   background-size: cover;
@@ -52,7 +50,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* perspective: 1000px; */
+
 }
 .card-front,
 .card-back {
@@ -62,18 +60,12 @@ body {
   transition: transform 0.5s;
   background-repeat: no-repeat;
   background-size: cover;
-  /* backface-visibility : hidden; */
+
 }
 .card-front {
   transform: rotateY(180deg);
   backface-visibility: hidden;
-
-  /* display: none; */
 }
-/* .card-back {
-  background-color: red;
-} */
-
 .flipped {
   transform: rotateY(180deg);
   background-color: blue;
@@ -98,10 +90,10 @@ body {
   background-color: rgb(50, 50, 75);
   width: 800px;
 }
-#win-comment,
+/* #win-comment,
 #lost-comment {
   display: none;
-}
+} */
 
 #start-button,
 #restart-button,
@@ -131,12 +123,3 @@ body {
   align-items: center;
   transition: opacity 0.5s ease-in-out;
 }
-/* #lost-comment , #win-comment{
-    font-size:100px;
-    color: red;
-    text-align: center;
-    font-size: 100px;
-    border: 2px solid rgb(110, 110, 197);
-    background-color: rgb(50, 50, 75);
-    width: 800px;
-} */
