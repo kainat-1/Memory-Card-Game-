@@ -45,7 +45,7 @@ body {
   perspective: 300px;
   transform-style: preserve-3d;
   position: relative;
-  width: 20%;
+  width: 150px;
   height: 150px;
   position: relative;
   border: 1px solid #ccc;
