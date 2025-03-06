@@ -4,6 +4,54 @@ document.getElementById("start-button").addEventListener("click", function () {
   document.getElementById("start-screen").style.display = "none";
   game = new MemoryGame();
 });
+// class CardDeck {
+//   constructor() {
+//     this.cardImages = [
+//       { name: "HERO-1", image: "images/hero-1.jpg" },
+//       { name: "HERO-2", image: "images/hero-2.jpg" },
+//       { name: "HERO-3", image: "images/hero-3.jpg" },
+//       { name: "HERO-4", image: "images/hero-4.jpg" },
+//       { name: "HERO-5", image: "images/hero-5.jpg" },
+//     ];
+//     this.cards = [...this.cardImages, ...this.cardImages].map((card, index) =>
+//       this.createCard(card, index)
+//     );
+//     this.shuffleCards();
+//   }
+
+//   createCard(card, index) {
+//     const cardElement = document.createElement("div");
+//     cardElement.classList.add("card");
+//     cardElement.dataset.name = card.name;
+//     cardElement.dataset.id = index + 1;
+
+//     const front = document.createElement("div");
+//     front.classList.add("card-front");
+//     front.style.backgroundImage = `url(${card.image})`;
+//     cardElement.appendChild(front);
+
+//     const back = document.createElement("div");
+//     back.classList.add("card-back");
+//     cardElement.appendChild(back);
+
+//     return cardElement;
+//   }
+
+//   shuffleCards() {
+//     this.cards.sort(() => Math.random() - 0.5);
+//   }
+
+//   appendCardsToBoard(memoryBoard) {
+//     memoryBoard.innerHTML = ""; 
+//     this.cards.forEach((card) => memoryBoard.appendChild(card));
+//   }
+// }
+// class Card {
+//   constructor(name, image){
+//     this.name = name
+//     this.image
+//   }
+// }
 
 const cardImages = [
   { name: "HERO-1", image: "images/hero-1.jpg" },

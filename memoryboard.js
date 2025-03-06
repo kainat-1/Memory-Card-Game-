@@ -38,6 +38,14 @@ class MemoryGame {
 
   maximumMoves() {
     if (parseInt(this.moves.textContent) >= this.maxMoves) {
+      this.endGame(false);
+    }
+  }
+  checkForWin() {
+    const totalPairs = cardImages.length;
+    const matchedPairs = document.querySelectorAll(".card.matched").length / 2;
+    if (matchedPairs === totalPairs) {
+      isWon = true;
       this.endGame(true);
     }
   }
@@ -52,14 +60,14 @@ class MemoryGame {
       document.getElementById("lost-comment").style.display = "block";
     }
   }
-  checkForWin() {
-    const totalPairs = cardImages.length;
-    const matchedPairs = document.querySelectorAll(".card.matched").length / 2;
-    if (matchedPairs === totalPairs) {
-      isWon = true;
-      this.endGame(true);
-    }
-  }
+  // checkForWin() {
+  //   const totalPairs = cardImages.length;
+  //   const matchedPairs = document.querySelectorAll(".card.matched").length / 2;
+  //   if (matchedPairs === totalPairs) {
+  //     isWon = true;
+  //     this.endGame(true);
+  //   }
+  // }
 }
 document
   .getElementById("restart-button")
