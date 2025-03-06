@@ -86,7 +86,7 @@ body {
 .title,
 #lost-comment,
 #win-comment,
-#gemeOver {
+#gameOver {
   color: red;
   text-align: center;
   font-size: 100px;
@@ -94,10 +94,6 @@ body {
   background-color: rgb(50, 50, 75);
   width: 800px;
 }
-/* #win-comment,
-#lost-comment {
-  display: none;
-} */
 
 #start-button,
 #restart-button,
